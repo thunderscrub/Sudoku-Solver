@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script src="index.js"></script>
+<div id="main">
+
+</div>
+  <template id = "sudoku">
+      <table id = "sudoku">
+        <caption>Sudoku Solver</caption>
+        <colgroup><col><col><col>
+        <colgroup><col><col><col>
+        <colgroup><col><col><col>
+          <tbody>
+            <tr> <td id="00"> <td id="01"> <td id="02"> <td id="03"> <td id="04"> <td id="05"> <td id="06"> <td id="07"> <td id="08">
+            <tr> <td id="10"> <td id="11"> <td id="12"> <td id="13"> <td id="14"> <td id="15"> <td id="16"> <td id="17"> <td id="18">
+            <tr> <td id="20"> <td id="21"> <td id="22"> <td id="23"> <td id="24"> <td id="25"> <td id="26"> <td id="27"> <td id="28">
+          <tbody>
+            <tr> <td id="30"> <td id="31"> <td id="32"> <td id="33"> <td id="34"> <td id="35"> <td id="36"> <td id="37"> <td id="38">
+            <tr> <td id="40"> <td id="41"> <td id="42"> <td id="43"> <td id="44"> <td id="45"> <td id="46"> <td id="47"> <td id="48">
+            <tr> <td id="50"> <td id="51"> <td id="52"> <td id="53"> <td id="54"> <td id="55"> <td id="56"> <td id="57"> <td id="58">
+          <tbody>
+            <tr> <td id="60"> <td id="61"> <td id="62"> <td id="63"> <td id="64"> <td id="65"> <td id="66"> <td id="67"> <td id="68">
+            <tr> <td id="70"> <td id="71"> <td id="72"> <td id="73"> <td id="74"> <td id="75"> <td id="76"> <td id="77"> <td id="78">
+            <tr> <td id="80"> <td id="81"> <td id="82"> <td id="83"> <td id="84"> <td id="85"> <td id="86"> <td id="87"> <td id="88">
+      </table>
+  </template>
+
+  <template>
+    <input type="text" pattern="[1-9]{1}" maxlength="1">
+  </template>
+
+  <template>
+    <div id = "val" class = "answer"></div>
+  </template>
+
+  <template>
+    <div><div class = "mini">1</div><div class = "mini">2</div><div class = "mini">3</div></div>
+    <div class = "mini">4</div><div class = "mini">5</div><div class = "mini">6</div>
+    <div class = "mini">7</div><div class = "mini">8</div><div class = "mini">9</div>
+  </template>
+
+  <script>
+    createInputs();
+    document.onkeydown = function(event) {
+      switch(event.key){
+        case "Enter":
+          if(typeof currclass == "undefined"){
+            solve();
+          }
+          break;
+        case "ArrowRight":
+          if(typeof currclass != "undefined"){
+            currclass.nextframe();
+          }
+          break;
+        case "ArrowLeft":
+          if(typeof currclass != "undefined"){
+            currclass.prevframe();
+          }
+          break;
+      }
+    }
+  </script>
+
+  </body>
+</html>

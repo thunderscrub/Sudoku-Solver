@@ -1,0 +1,8 @@
+div { text-align: center;}
+table { border-collapse: collapse; font-family: Calibri, sans-serif; display: inline-block; }
+colgroup, tbody { border: solid medium; }
+td { border: solid thin; height: 2.05em; width: 2.05em; text-align: center; padding: 0; font-size: 1.5em; font-weight: 500; }
+input { height: 2.05em; width: 2.05em; padding: 0; border: none; text-align: center; font-size: 2em; font-weight: 500; }
+caption { font-size: 2em; }
+.answer { min-height: 1.8em; min-width: 2.2em; padding-top: 0.4em;}
+.mini { width: calc(100%/3); height: calc(100%/3);}
